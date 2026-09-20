@@ -7,6 +7,9 @@ class TestAppRoutes(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
+        from app.routes import items
+        items.clear()
+        items.append({"name": "item1"})
 
     def test_hello_route(self):
         response = self.app.get('/')

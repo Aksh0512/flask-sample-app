@@ -3,7 +3,7 @@
 from app import app
 from flask import request
 
-items = []
+items = [{"name": "item1"}]
 
 @app.route('/')
 def hello():
